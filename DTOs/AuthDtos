@@ -5,7 +5,7 @@ public record LoginRequest(string Email, string Password, string? MfaCode);
 public record RefreshRequest(string RefreshToken);
 public record MfaVerifyRequest(string Code);
 public record ExternalLoginRequest(string Provider, string IdToken, string Email, string? Name, string ProviderKey);
-
+// At the moment we are not using forgot password, reset password and confirm email, but we can implement them in the future if needed
 public record ForgotPasswordRequest(string Email);
 public record ResetPasswordRequest(string Email, string Token, string NewPassword);
 public record ConfirmEmailRequest(string UserId, string Token);
